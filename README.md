@@ -4,7 +4,7 @@ This is an open source project from [DevProjects](http://www.codementor.io/proje
 Find the project requirements here: [Simple web contact form](https://www.codementor.io/projects/web/create-a-contact-form-b2n9ltrdy1)
 
 ## Tech/framework used
-Built with Javascript, HTML and CSS.
+Built with HTML, CSS and PHP.
 
 ## Screenshots and demo
 Screenshots of your app and/or a link to your live demo
