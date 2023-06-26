@@ -8,3 +8,6 @@ html, body{
   height: 100%;
 }
 
+.formBackground{
+  background: center / contain no-repeat url('./img/formBackground.jpg');
+}
