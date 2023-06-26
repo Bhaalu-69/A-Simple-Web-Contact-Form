@@ -1,1 +1,11 @@
+body {
+    background: url("https://picsum.photos/1920/1080") center top/cover;
+  }
 
+  .container {
+    background-color: black;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
