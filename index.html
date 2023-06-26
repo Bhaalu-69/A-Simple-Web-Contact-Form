@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -13,6 +13,40 @@
         <div id="form-heading">
           <h1>Online Contact Form</h1>
         </div>
+        <div id="form-fillings">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Prince Raj"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="princeraj@example.com"
+            required
+          />
+          <select name="queryCategory" id="queryCategory" required>
+            <option value="#" selected disabled>Choose one from the following</option>
+            <option value="Query">Query</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Complaint">Complaint</option>
+            <option value="Other">Other</option>
+          </select>
+          <div id="text-box-container">
+            <textarea
+            name="comments"
+            id="comments"
+            cols="42"
+            rows="8"
+            placeholder="Comments"
+            required
+          ></textarea>
+          </div>
+        </div>
+        <button type="submit" id="form-button">Submit</button>
       </div>
     </div>
   </body>
