@@ -9,6 +9,8 @@ app.get('/', (req, res) => {
   res.status(200).sendFile(__dirname + '/index.html');
 });
 
+app.post('/');
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
