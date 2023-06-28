@@ -1,85 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;;
-}
-
-html, body{
-  width: 100%;
-  height: 100%;
-  background-image: url('./img/formBackground.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
-  overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+:root {
+    --bg-color: #353535;
+    --second-bg-color: #1F1F1F;
+    --main-color: #ECEFF1;
+    --text-color: #FFFFFF;
 }
 
-.form-group {
-  width: 30%;
-  height: 88%;
-  background-color: #E3EBEF;
-  background: linear-gradient(#9BC59D, #D0FCB3);
-  border: 2px solid #715E29;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  overflow: auto;
-  box-sizing: border-box;
+html {
+    font-size: 57.5%;
+    overflow-x: hidden;
 }
 
-#form-heading {
-  background-color: #D0FCB3;
-  text-align: center;
-  border: 2px solid #312921;
-  border-radius: 27px;
-  margin: 0.5rem 0;
-  color: black;
-  padding: 0rem 0.5rem;
-  margin: 0rem 0.5rem;
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
 }
 
-#form-fillings {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem 0;
-}
-#form-fillings > input, #form-fillings > select, #form-fillings > #text-box-container > textarea {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem 0.5rem;
-  text-align: center;
-  border: 2px solid green;
-  border-radius: 8px;
-}
-#text-box-container {
- flex: 1; /* Use flex to allow the container to grow and take remaining space */
-  width: 100%;
-  overflow: hidden;
-}
-#form-fillings textarea {
-  resize: none;
-  align-self: center;
+span {
+    color: var(--main-color);
 }
 
-#form-button {
-  background-color: green;
-  margin: 0.5rem 0;
-  padding: 0.5rem 0;
-  align-self: center;
-  margin-top: auto; /* Push the button to the bottom of the container */
+section {
+    min-height: 100vh;
+    padding: 8rem 9% 2rem;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
 }

@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="form-group">
-        <div id="form-heading">
-          <h1>Online Contact Form</h1>
-        </div>
-        <div id="form-fillings">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Prince Raj"
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="princeraj@example.com"
-            required
-          />
-          <select name="queryCategory" id="queryCategory" required>
-            <option value="#" selected disabled>Choose one from the following</option>
-            <option value="Query">Query</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Complaint">Complaint</option>
-            <option value="Other">Other</option>
-          </select>
-          <div id="text-box-container">
-            <textarea
-            name="comments"
-            id="comments"
-            cols="42"
-            rows="8"
-            placeholder="Comments"
-            required
-          ></textarea>
-          </div>
-        </div>
-        <button type="submit" id="form-button">Submit</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="contact" id="contact">
+    <h2 class="heading">Online <span>Form</span></h2>
+
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" required/>
+        <input type="email" placeholder="Email" required/>
       </div>
-    </div>
-  </body>
+      <div class="input-box">
+        <input type="tel" placeholder="Mobile Number" required/>
+        <input type="text" placeholder="Email Subject" required/>
+      </div>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Your Message"
+        required
+      ></textarea>
+      <input type="submit" value="Send Message" class="btn" />
+    </form>
+  </section>
+</body>
 </html>
