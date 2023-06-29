@@ -28,7 +28,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile(__dirname + '/index.html');
+    res.status(200).sendFile(__dirname + '/home.html');
 });
 
 app.post('/', async (req, res) => {
