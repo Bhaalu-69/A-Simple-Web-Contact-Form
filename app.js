@@ -24,8 +24,8 @@ Contact = mongoose.model('Contact', contactSchema);
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
-// const bodyParser = require('body-parser');
-// app.use(bodyParser.urlencoded({ extended: true }));
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.status(200).sendFile(__dirname + '/index.html');
