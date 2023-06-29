@@ -24,8 +24,8 @@ Contact = mongoose.model('Contact', contactSchema);
 
 // Serve static files from the "public" directory
 app.use(express.static('public'));
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
+// const bodyParser = require('body-parser');
+// app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
     res.status(200).sendFile(__dirname + '/index.html');
@@ -33,7 +33,6 @@ app.get('/', (req, res) => {
 
 app.post('/', async (req, res) => {
     const { fullName, email, mobileNumber, optionChosen, message } = req.body;
-    console.log(fullName, email);
     const newContact = new Contact({
         fullName: fullName,
         email: email,
@@ -42,10 +41,15 @@ app.post('/', async (req, res) => {
         message: message,
     });
 
-    await newContact.save();
-    res.send("Ok!")
+    await newContact.save()
+        .then(() => {
+            res.status(200).send("Ok!");
+        })
+        .catch(error => {
+            console.log(error);
+        });
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Website live on port ${port}`);
 });
