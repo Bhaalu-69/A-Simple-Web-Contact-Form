@@ -1,4 +1,4 @@
-const config = require('./config.json');
+const config = require('./config.json'); // for databaseConnectionString
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
@@ -31,6 +31,8 @@ app.get('/', (req, res) => {
     res.status(200).sendFile(__dirname + '/home.html');
 });
 
+
+// Taking form-input and saving it to database
 app.post('/', async (req, res) => {
     const { fullName, email, mobileNumber, optionChosen, message } = req.body;
     const newContact = new Contact({
