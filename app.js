@@ -17,7 +17,7 @@ const contactSchema = new mongoose.Schema({
     fullName: String,
     email: String,
     mobileNumber: Number,
-    emailSubject: String,
+    optionChosen: String,
     message: String,
 });
 Contact = mongoose.model('Contact', contactSchema);
@@ -32,13 +32,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', async (req, res) => {
-    const { fullName, email, mobileNumber, emailSubject, message } = req.body;
+    const { fullName, email, mobileNumber, optionChosen, message } = req.body;
     console.log(fullName, email);
     const newContact = new Contact({
         fullName: fullName,
         email: email,
         mobileNumber: mobileNumber,
-        emailSubject: emailSubject,
+        optionChosen: optionChosen,
         message: message,
     });
 

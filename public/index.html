@@ -17,7 +17,14 @@
       </div>
       <div class="input-box">
         <input type="tel" name="mobileNumber" placeholder="Mobile Number" required/>
-        <input type="text" name="emailSubject" placeholder="Email Subject" required/>
+        <!-- <input type="" name="emailSubject" placeholder="Email Subject" required/> -->
+        <select name="optionChosen" id="optionChosen" required>
+          <option value="Category" disabled>Category</option>
+          <option value="Query">Query</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Complaint">Complaint</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
       <textarea
         name="message"
