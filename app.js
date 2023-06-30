@@ -1,8 +1,11 @@
-const config = require('./config.json'); // for databaseConnectionString
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const port = 3000;
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const config = require('./config.json'); // for databaseConnectionString
 
 main().catch(err => console.log(err));
 let Contact;
@@ -22,18 +25,34 @@ const contactSchema = new mongoose.Schema({
 });
 Contact = mongoose.model('Contact', contactSchema);
 
-// Serve static files from the "public" directory
-app.use(express.static('public'));
-const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'pug');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile(__dirname + '/home.html');
+    res.status(200).render('home');
 });
 
+app.post('/', (req, res) => {
+
+    console.log({ 
+        fullNameField : req.body.fullName,
+        emailField : req.body.email,
+        mobileNumberField : req.body.mobileNumber,
+        messageField : req.body.message,
+        optionChosenField : req.body.optionChosen,
+     });
+
+    res.status(200).render('confirm', { 
+        fullNameField : req.body.fullName,
+        emailField : req.body.email,
+        mobileNumberField : req.body.mobileNumber,
+        messageField : req.body.message,
+        optionChosenField : req.body.optionChosen,
+     });
+});
 
 // Taking form-input and saving it to database
-app.post('/', async (req, res) => {
+app.post('/confirm', (req, res) => {
     const { fullName, email, mobileNumber, optionChosen, message } = req.body;
     const newContact = new Contact({
         fullName: fullName,
@@ -43,7 +62,7 @@ app.post('/', async (req, res) => {
         message: message,
     });
 
-    await newContact.save()
+    newContact.save()
         .then(() => {
             res.status(200).send("Ok!");
         })

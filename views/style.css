@@ -88,6 +88,10 @@ section {
     transition: 0.5s ease;
 }
 
+.contact form input[type="submit"] {
+    margin: 0rem 1rem;
+}
+
 .btn:hover {
     box-shadow: none;
 }
@@ -106,4 +110,8 @@ section {
 
 .img-container img {
     width: 5vw;
+}
+
+.hiddenElement {
+    display: none;
 }

@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Online Form
+    style
+      include style.css
+  body
+    section.contact#contact
+      h2.heading Online #{span}Form
+      form(action="/confirm", method="POST")
+        .input-box
+          input(type="text", name="fullName", placeholder="Full Name", value=fullNameField, readonly)
+          input(type="email", name="email", placeholder="Email", value=emailField, readonly)
+        .input-box
+          input(type="tel", name="mobileNumber", placeholder="Mobile Number", value=mobileNumberField, readonly)
+          select(name="optionChosen", disabled)
+            option(value=optionChosenField) #{optionChosenField}
+        textarea(name="message", cols="30", rows="10", placeholder="Your Message", value=messageField, readonly) #{messageField}
+        input(type="submit", value="Submit", class="btn", id="submitButton")
+    .img-container
+      img(src="./img/mascot1.png", alt="Mascot 1")
+      img(src="./img/mascot2.png", alt="Mascot 2")
+      img(src="./img/mascot3.png", alt="Mascot 3")
+      img(src="./img/mascot4.png", alt="Mascot 4")

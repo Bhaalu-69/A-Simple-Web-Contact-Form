@@ -2,7 +2,8 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
-    "mongoose": "^7.3.1"
+    "mongoose": "^7.3.1",
+    "pug": "^3.0.2"
   },
   "name": "a-simple-web-contact-form",
   "description": "This is an open source project from [DevProjects](http://www.codementor.io/projects). Feedback and questions are welcome!\r Find the project requirements here: [Simple web contact form](https://www.codementor.io/projects/web/create-a-contact-form-b2n9ltrdy1)",

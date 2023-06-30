@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Online Form
+    style 
+      include style.css
+  body
+    section.contact#contact
+      h2.heading Online #{span}Form
+      form(action="/" method="POST")
+        .input-box
+          input(type="text" name="fullName" placeholder="Full Name", required)
+          input(type="email" name="email" placeholder="Email", required)
+        .input-box
+          input(type="tel" name="mobileNumber" placeholder="Mobile Number", required)
+          select(name="optionChosen" id="optionChosen", required)
+            option(value="Category", disabled) Category
+            option(value="Query") Query
+            option(value="Feedback") Feedback
+            option(value="Complaint") Complaint
+            option(value="Other") Other
+        textarea(name="message" cols="30" rows="10" placeholder="Your Message", required)
+        input(type="submit" value="Next" class="btn" id="nextButton")
+    .img-container
+      img(src="./img/mascot1.png" alt="Mascot 1")
+      img(src="./img/mascot2.png" alt="Mascot 2")
+      img(src="./img/mascot3.png" alt="Mascot 3")
+      img(src="./img/mascot4.png" alt="Mascot 4")
