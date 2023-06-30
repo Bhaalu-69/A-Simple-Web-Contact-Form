@@ -27,7 +27,7 @@ Contact = mongoose.model('Contact', contactSchema);
 
 app.set('view engine', 'pug');
 app.set('views', './views');
-app.set('static', express.static('static'));
+app.set(express.static('static'));
 
 app.get('/', (req, res) => {
     res.status(200).render('home');
