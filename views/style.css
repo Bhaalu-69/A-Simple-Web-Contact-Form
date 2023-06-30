@@ -115,3 +115,15 @@ section {
 .hiddenElement {
     display: none;
 }
+
+/* CSS Exclusive for succesful.pug */
+.succesfulPageSection h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 4rem;
+}
+.succesfulPageSection {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}

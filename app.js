@@ -34,15 +34,6 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-
-    console.log({ 
-        fullNameField : req.body.fullName,
-        emailField : req.body.email,
-        mobileNumberField : req.body.mobileNumber,
-        messageField : req.body.message,
-        optionChosenField : req.body.optionChosen,
-     });
-
     res.status(200).render('confirm', { 
         fullNameField : req.body.fullName,
         emailField : req.body.email,
@@ -65,7 +56,7 @@ app.post('/confirm', (req, res) => {
 
     newContact.save()
         .then(() => {
-            res.status(200).send("Ok!");
+            res.status(200).render('succesful');
         })
         .catch(error => {
             console.log(error);
