@@ -9,13 +9,13 @@ html(lang="en")
   body
     section.contact#contact
       h2.heading Online #{span}Form
-      form(action="/confirm", method="POST")
+      form(action="/confirm" method="POST")
         .input-box
           input(type="text", name="fullName", placeholder="Full Name", value=fullNameField, readonly)
           input(type="email", name="email", placeholder="Email", value=emailField, readonly)
         .input-box
           input(type="tel", name="mobileNumber", placeholder="Mobile Number", value=mobileNumberField, readonly)
-          select(name="optionChosen", disabled)
+          select(name="optionChosen", id="optionChosen")
             option(value=optionChosenField) #{optionChosenField}
-        textarea(name="message", cols="30", rows="10", placeholder="Your Message", value=messageField, readonly) #{messageField}
+        textarea(name="message", cols="30", rows="10", placeholder="Your Message", readonly) #{messageField}
         input(type="submit", value="Submit", class="btn", id="submitButton")
